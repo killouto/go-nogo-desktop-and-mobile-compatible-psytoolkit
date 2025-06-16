@@ -1,8 +1,4 @@
-# cognitive-tasks-persian-mobile-desktop
-A collection of three Persian-language cognitive psychology experiments (memory, inhibition, task switching) adapted for both mobile and desktop using PsyToolkit.
-# Persian Cognitive Psychology Tasks (PsyToolkit)
-
-This repository contains three web-adapted cognitive psychology tasks, designed in **PsyToolkit** and translated into **Persian**. Each task has been technically adapted for both **desktop and mobile platforms**.
+This repository contains one web-adapted cognitive psychology tasks, designed in **PsyToolkit** and translated into **Persian**. Each task has been technically adapted for both **desktop and mobile platforms**.
 
 ## Included Tasks
 
@@ -39,16 +35,12 @@ Tasks were translated into Persian and adapted for mobile and desktop platforms 
 
 -----------------------------------------------------------------------------
 
-# مجموعه‌ای از آزمون‌های شناختی به زبان فارسی (سازگار با موبایل و دسکتاپ)
 
 این مخزن شامل سه آزمون روان‌شناسی شناختی است که در محیط **PsyToolkit** طراحی شده‌اند، به زبان **فارسی ترجمه** و برای اجرا در هر دو پلتفرم **موبایل و دسکتاپ** بهینه‌سازی شده‌اند.
 
-## آزمون‌های موجود
 
-- **آزمون Go/No-Go**: ارزیابی بازداری پاسخ و کنترل توجه  
-- **آزمون N-back (n=2)**: سنجش حافظه کاری 
-- **آزمون جابجایی وظیفه (Task Switching)**: ارزیابی انعطاف‌پذیری شناختی  
-
+- **آزمون Go/No-Go**: ارزیابی بازداری پاسخ و کنترل توجه
+- 
 ویژگی‌های کلی آزمون‌ها:
 - به زبان فارسی نوشته شده‌اند  
 - مناسب برای مرورگرهای دسکتاپ و موبایل  
