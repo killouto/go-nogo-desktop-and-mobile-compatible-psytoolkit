@@ -1,4 +1,3 @@
-# persian-go-nogo-desktop-and-mobile-compatible-psytoolkit
 This repository contains one web-adapted cognitive psychology tasks, designed in **PsyToolkit** and translated into **Persian**. Each task has been technically adapted for both **desktop and mobile platforms**.
 
 ## Included Tasks
