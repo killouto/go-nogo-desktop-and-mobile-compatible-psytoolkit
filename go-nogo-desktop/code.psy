@@ -1,0 +1,49 @@
+options
+  bitmapdir stimuli
+  
+bitmaps
+  instructions
+  gosignal
+  nogosignal
+  errortype1
+  errortype2
+
+task go
+  keys space
+  set $errorstatus 0
+  show bitmap gosignal
+  readkey 1 2000 # wait 2 seconds for key to be pressed
+  clear 1
+  if STATUS == TIMEOUT
+    set $errorstatus 1
+    show bitmap errortype2
+    delay 2000
+    clear 2
+  fi    
+  delay 500 # intertrial interval
+  save TASKNAME RT $errorstatus 
+
+task nogo
+  keys space
+  set $errorstatus 0
+  show bitmap nogosignal
+  readkey 1 2000
+  clear 1
+  if STATUS != TIMEOUT  ## there should be a TIME OUT, so if not, we have a mistake
+    set $errorstatus 1
+    show bitmap errortype1
+    delay 2000
+    clear 2
+  fi    
+  delay 500 # intertrial interval
+  save TASKNAME RT $errorstatus 
+
+# -------------------------------------
+
+message instructions
+
+block test
+  tasklist
+    go 20
+    nogo 5
+  end

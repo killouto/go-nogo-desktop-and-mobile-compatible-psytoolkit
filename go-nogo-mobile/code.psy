@@ -1,0 +1,54 @@
+options
+  bitmapdir stimuli
+  
+bitmaps
+  instructions
+  gosignal
+  nogosignal
+  errortype1
+  errortype2
+  taparea_700x400
+
+options
+  mouse on
+  fullscreen
+
+task go
+  set $errorstatus 0
+  show bitmap gosignal 0 0
+  show bitmap taparea_700x400 0 0  # full-screen clickable area
+  readmouse l 1 2000  # waiting for touch/click on region 1 (gosignal)
+  clear 1
+  if STATUS == TIMEOUT
+    set $errorstatus 1
+    show bitmap errortype2
+    delay 2000
+    clear 2
+  fi    
+  delay 500
+  save TASKNAME RT $errorstatus 
+
+task nogo
+  set $errorstatus 0
+  show bitmap nogosignal 0 0
+  show bitmap taparea_700x400 0 0  # full-screen clickable area
+  readmouse l 1 2000  # mistake if user taps
+  clear 1
+  if STATUS != TIMEOUT
+    set $errorstatus 1
+    show bitmap errortype1
+    delay 2000
+    clear 2
+  fi    
+  delay 500
+  save TASKNAME RT $errorstatus 
+
+# -------------------------------------
+
+message instructions mouse
+
+block test
+  tasklist
+    go 20
+    nogo 5
+  end

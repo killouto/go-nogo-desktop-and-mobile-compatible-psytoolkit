@@ -1,0 +1,1 @@
+Go no-go experiments are popular. This experiment shows how you get an error message if the participant does NOT WITHHOLD a response as required.
